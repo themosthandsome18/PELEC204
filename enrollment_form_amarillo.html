@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;}
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;}
+
+        h1 {
+            margin: 0;
+            font-size: 36px;}
+
+        .form-container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input[type="lastnametext"],
+        .form-container input[type="firstnametext"],
+        .form-container input[type="email"],
+        .form-container input[type="number"],
+        .form-container select,
+        .form-container input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border-radius: 4px; 
+            border: 1px solid #ccc;
+        }
+
+        .form-container input[type="radio"] {
+            width: auto;
+            margin-right: 15px;
+        }
+
+        .form-container .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .form-container .checkbox-group label {
+            width: 200px;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+     <header>
+        <h1>Student Enrollment Form</h1>
+    </header>
+
+    <div class="form-container">
+        <h3>Instructions:</h3>
+        <ol>
+            <small>Fill in the form fields.</small>
+            <br>
+            <small>Check your interests.</small>
+            <br>
+            <small>Click "Enroll Now" to submit your information.</small>
+        </ol>
+        <form action="#" method="POST">
+            <h3><label for="lastname">Last Name:</label></h3>
+            <input type="lastnametext" id="lastname" name="lastname" required>
+
+            <h3><label for="firstname">First Name:</label></h3>
+            <input type="firstnametext" id="firstname" name="firstname" required>
+
+            <h3><label for="email">Email Address:</label></h3>
+            <input type="email" id="email" name="email" required>
+
+            <h3><label for="age">Age:</label></h3>
+            <input type="number" id="age" name="age" min="18" required>
+
+            <h3><label>Sex:</label></h3>
+            <label for="male"><input type="radio" id="male" name="sex" value="Male" required>Male</label>
+            <label for="female"><input type="radio" id="female" name="sex" value="female" required>Famale</label>
+    
+
+            <h3><label for="course">Course Options:</label></h3>
+            <select id="course" name="course">
+                <option value="BSIT">BSIT</option>
+                <option value="BSSW">BSSW</option>
+                <option value="BSPA">BSPA</option>
+                <option value="BSCSE">BSCSE</option>
+            </select>
+
+            <h3><label>Interests:</label></h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="Web Development"> Web Development</label>
+                <label><input type="checkbox" name="interests" value="Data Science"> Data Science</label>
+                <label><input type="checkbox" name="interests" value="Networking"> Networking</label>
+                <label><input type="checkbox" name="interests" value="Graphic Design"> Graphic Design</label>
+            </div>
+            <br>
+            <h3><button type="submit">Enroll Now</button></h3>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Course</th>
+                <th>Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Stephanie Tere</td>
+                <td>Most.cutie@example.com</td>
+                <td>19</td>
+                <td>Famale</td>
+                <td>BSIT</td>
+                <td>Networking, Data Science</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ceddy Juan Dela Cruz</td>
+                <td>laking_eits_tigas_pa@example.com</td>
+                <td>20</td>
+                <td>Male</td>
+                <td>BSPA</td>
+                <td>Web Development, Graphic Design</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John Joseph Israel</td>
+                <td>nigs.fu.that.child.blacks@example.com</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>BSSW</td>
+                <td>Web Development</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nercie Mentinilla</td>
+                <td>kalvo.liits_owntine@example.com</td>
+                <td>21</td>
+                <td>Male</td>
+                <td>BSCSE</td>
+                <td>Data Science</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Isha Powder</td>
+                <td>nagingpowder@example.com</td>
+                <td>9</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Networking, Graphic Design</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Jinx Smith</td>
+                <td>Psycho_Arsenal@example.com</td>
+                <td>19</td>
+                <td>Female</td>
+                <td>BSSW</td>
+                <td>Networking, Graphic Design, Kaboom</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Violet Kirasya</td>
+                <td>vistandforstupeyd@example.com</td>
+                <td>23</td>
+                <td>Female</td>
+                <td>BSCSE</td>
+                <td>Networking, Data Science</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Caitlyn Kiramman</td>
+                <td>cupcake04@example.com</td>
+                <td>22</td>
+                <td>Female</td>
+                <td>BSCSE</td>
+                <td>Networking, Marupok</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Jayce Talis</td>
+                <td>killedarcanejesusxd@example.com</td>
+                <td>24</td>
+                <td>Male</td>
+                <td>BSIT</td>
+                <td>Data Science</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
